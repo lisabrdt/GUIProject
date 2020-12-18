@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GoWithTheGrow</string>
+    <string name="title_home">Übersicht</string>
+    <string name="title_catalog">Katalog</string>
+    <string name="title_wiki">Wiki</string>
+    <string name="title_calender">Kalender</string>
+    <string name="title_scan">Scan</string>
+</resources>

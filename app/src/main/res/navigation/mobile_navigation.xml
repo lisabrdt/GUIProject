@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_dashboard">
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="de.gwtgteam.gowiththegrow.ui.dashboard.DashboardFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_catalog"
+        android:name="de.gwtgteam.gowiththegrow.ui.catalog.CatalogFragment"
+        android:label="@string/title_catalog"
+        tools:layout="@layout/fragment_catalog" />
+
+    <fragment
+        android:id="@+id/navigation_wiki"
+        android:name="de.gwtgteam.gowiththegrow.ui.wiki.WikiFragment"
+        android:label="@string/title_wiki"
+        tools:layout="@layout/fragment_wiki" />
+
+    <fragment
+        android:id="@+id/navigation_calender"
+        android:name="de.gwtgteam.gowiththegrow.ui.calender.CalenderFragment"
+        android:label="@string/title_calender"
+        tools:layout="@layout/fragment_calender" />
+
+    <fragment
+        android:id="@+id/navigation_scan"
+        android:name="de.gwtgteam.gowiththegrow.ui.scan.ScanFragment"
+        android:label="@string/title_scan"
+        tools:layout="@layout/fragment_scan" />
+</navigation>
