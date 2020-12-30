@@ -37,7 +37,7 @@ public class WikiFragment extends Fragment {
         list.add("Test1");
         list.add("Test1");
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, android.R.id.text1, list);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter(this.getContext(), android.R.layout.simple_list_item_1, list);
         listView.setAdapter(arrayAdapter);
 
         wikiViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {

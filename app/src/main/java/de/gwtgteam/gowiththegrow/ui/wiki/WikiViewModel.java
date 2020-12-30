@@ -10,7 +10,8 @@ public class WikiViewModel extends ViewModel {
 
     public WikiViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        mText.setValue("This is the wiki");
+
     }
 
     public LiveData<String> getText() {
