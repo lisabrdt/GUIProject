@@ -31,13 +31,6 @@ public class DashboardFragment extends Fragment implements AdapterView.OnClickLi
 
         ConstraintLayout layout = root.findViewById(R.id.DashboardElement);
         layout.setOnClickListener(this);
-        /*final TextView textView = root.findViewById(R.id.text_dashboard);
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });*/
         return root;
     }
 
