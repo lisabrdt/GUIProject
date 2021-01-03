@@ -63,6 +63,7 @@
 
             <TextView
                 android:id="@+id/detail_latin_name"
+                android:fontFamily="@font/abadi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="24dp"
@@ -77,6 +78,7 @@
 
             <TextView
                 android:id="@+id/detail_family"
+                android:fontFamily="@font/abadi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -89,6 +91,7 @@
 
             <TextView
                 android:layout_width="match_parent"
+                android:fontFamily="@font/abadi"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
@@ -102,6 +105,7 @@
 
             <TextView
                 android:id="@+id/detail_info_light"
+                android:fontFamily="@font/abadi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -113,6 +117,7 @@
 
             <TextView
                 android:layout_width="match_parent"
+                android:fontFamily="@font/abadi"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
@@ -126,6 +131,7 @@
 
             <TextView
                 android:id="@+id/detail_info_temp"
+                android:fontFamily="@font/abadi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -137,6 +143,7 @@
 
             <TextView
                 android:layout_width="match_parent"
+                android:fontFamily="@font/abadi"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
@@ -150,6 +157,7 @@
 
             <TextView
                 android:id="@+id/detail_info_humidity"
+                android:fontFamily="@font/abadi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -161,6 +169,7 @@
 
             <TextView
                 android:layout_width="match_parent"
+                android:fontFamily="@font/abadi"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
@@ -174,6 +183,7 @@
 
             <TextView
                 android:id="@+id/detail_info_water"
+                android:fontFamily="@font/abadi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -185,6 +195,7 @@
 
             <TextView
                 android:layout_width="match_parent"
+                android:fontFamily="@font/abadi"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
@@ -198,6 +209,7 @@
 
             <TextView
                 android:id="@+id/detail_info_dung"
+                android:fontFamily="@font/abadi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -209,6 +221,7 @@
 
             <TextView
                 android:layout_width="match_parent"
+                android:fontFamily="@font/abadi"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
@@ -222,6 +235,7 @@
 
             <TextView
                 android:id="@+id/detail_info_pest"
+                android:fontFamily="@font/abadi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"

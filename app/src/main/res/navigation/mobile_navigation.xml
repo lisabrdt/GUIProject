@@ -9,29 +9,34 @@
         android:id="@+id/navigation_dashboard"
         android:name="de.gwtgteam.gowiththegrow.ui.dashboard.DashboardFragment"
         android:label="@string/title_home"
+        android:fontFamily="@font/abadi"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_catalog"
         android:name="de.gwtgteam.gowiththegrow.ui.catalog.CatalogFragment"
         android:label="@string/title_catalog"
+        android:fontFamily="@font/abadi"
         tools:layout="@layout/fragment_catalog" />
 
     <fragment
         android:id="@+id/navigation_wiki"
         android:name="de.gwtgteam.gowiththegrow.ui.wiki.WikiFragment"
         android:label="@string/title_wiki"
+        android:fontFamily="@font/abadi"
         tools:layout="@layout/fragment_wiki" />
 
     <fragment
         android:id="@+id/navigation_calender"
         android:name="de.gwtgteam.gowiththegrow.ui.calender.CalenderFragment"
         android:label="@string/title_calender"
+        android:fontFamily="@font/abadi"
         tools:layout="@layout/fragment_calender" />
 
     <fragment
         android:id="@+id/navigation_scan"
         android:name="de.gwtgteam.gowiththegrow.ui.scan.ScanFragment"
         android:label="@string/title_scan"
+        android:fontFamily="@font/abadi"
         tools:layout="@layout/fragment_scan" />
 </navigation>

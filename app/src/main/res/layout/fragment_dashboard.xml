@@ -11,11 +11,68 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="25dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="34dp"
+                    android:layout_height="47dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="0"
+                    android:src="@drawable/dislike"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_weight="1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="23dp"
+                    android:src="@drawable/progress"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_weight="0"
+                    android:layout_width="34dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="14dp"
+                    android:src="@drawable/like"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gießen"
+                android:fontFamily="@font/abadi"
+                android:textColor="@color/LightBrown"
+                android:textSize="20sp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/DashboardElement"
@@ -24,7 +81,8 @@
                 android:background="@drawable/layout_round_corners"
                 android:paddingLeft="6dp"
                 android:paddingTop="5dp"
-                android:visibility="visible">
+                android:visibility="visible"
+                android:layout_margin="5dp">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="90dp"
@@ -36,7 +94,7 @@
                     <ImageView
                         android:id="@+id/roundedImageView"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="100dp"
                         android:background="@color/white"
                         android:scaleType="centerCrop"
                         android:src="@drawable/plant_photo_1" />
@@ -46,14 +104,46 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="119dp"
+                    android:layout_marginLeft="119dp"
+                    android:layout_marginTop="30dp"
                     android:text="Pflanze 1"
                     android:textColor="@color/white"
-                    android:textSize="20dp"
-                    tools:layout_editor_absoluteX="113dp"
-                    tools:layout_editor_absoluteY="28dp" />
+                    android:fontFamily="@font/abadi"
+                    android:textSize="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="48dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginRight="40dp"
+                    android:src="@drawable/drop_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="48dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="42dp"
+                    android:layout_marginRight="42dp"
+                    android:layout_marginBottom="13dp"
+                    android:gravity="center"
+                    android:text="400 ml"
+                    android:fontFamily="@font/abadi"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
         </LinearLayout>
     </ScrollView>
