@@ -79,8 +79,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@drawable/layout_round_corners"
-                android:paddingLeft="6dp"
-                android:paddingTop="5dp"
+                android:paddingLeft="1dp"
+                android:paddingTop="1dp"
                 android:visibility="visible"
                 android:layout_margin="5dp">
 
@@ -89,7 +89,9 @@
                     android:layout_height="90dp"
                     android:layout_margin="5dp"
                     android:elevation="10dp"
-                    app:cardCornerRadius="8dp">
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
                         android:id="@+id/roundedImageView"

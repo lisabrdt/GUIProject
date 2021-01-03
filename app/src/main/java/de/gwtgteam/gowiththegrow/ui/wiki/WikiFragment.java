@@ -39,7 +39,7 @@ public class WikiFragment extends Fragment implements AdapterView.OnItemClickLis
         list.add("Alles übers Düngen");
         list.add("Alles über Schädlinge");
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter(this.getContext(), R.drawable.wiki_list_element, list);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter(this.getContext(), R.layout.wiki_list_element, list);
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(this);
 
