@@ -20,7 +20,8 @@
 
             <SearchView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:iconifiedByDefault="false" />
 
             <TextView
                 android:layout_width="match_parent"
