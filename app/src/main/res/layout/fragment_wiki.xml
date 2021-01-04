@@ -6,14 +6,19 @@
     android:layout_height="match_parent"
     android:background="@color/DarkGrey"
     android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".ui.wiki.WikiFragment">
 
     <SearchView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="@color/LightGrey"
+        android:iconifiedByDefault="false"
+        android:padding="10dp" />
 
     <ListView
         android:id="@+id/list_wiki"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:textColor="@color/white" />
 </LinearLayout>
