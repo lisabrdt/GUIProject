@@ -37,7 +37,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="A"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -61,7 +61,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Agave"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/large_text" />
 
             <TextView
                 android:id="@+id/ananas"
@@ -74,7 +74,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Ananas"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/large_text" />
 
             <TextView
                 android:id="@+id/aloevera"
@@ -87,7 +87,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Aloe Vera"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/large_text" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -100,7 +100,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="B"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -124,7 +124,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Banane"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/large_text" />
 
             <TextView
                 android:id="@+id/basilikum"
@@ -137,7 +137,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Basilikum"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/large_text" />
 
             <TextView
                 android:id="@+id/begonia"
@@ -150,7 +150,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Begonia"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/large_text" />
 
             <TextView
                 android:id="@+id/benjamini"
@@ -163,7 +163,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Benjamini"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/large_text" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -176,7 +176,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="C"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -200,7 +200,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Calendula"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/large_text" />
 
             <TextView
                 android:id="@+id/chrysanthemen"
@@ -213,7 +213,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Chrysanthemen"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/large_text" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -226,7 +226,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="D"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -250,7 +250,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Dattelpalme"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/large_text" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -263,7 +263,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="E"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -288,7 +288,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="F"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -313,7 +313,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="G"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -338,7 +338,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="H"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -363,7 +363,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="I"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -388,7 +388,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="J"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -413,7 +413,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="K"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -438,7 +438,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="L"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -463,7 +463,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="M"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -488,7 +488,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="N"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -513,7 +513,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="O"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -538,7 +538,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="P"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -563,7 +563,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Q"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -588,7 +588,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="R"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -613,7 +613,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="S"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -638,7 +638,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="T"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -663,7 +663,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="U"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -688,7 +688,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="V"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -713,7 +713,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="W"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -738,7 +738,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="X"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -763,7 +763,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Y"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View
@@ -788,7 +788,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Z"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <View

@@ -23,13 +23,9 @@ import de.gwtgteam.gowiththegrow.R;
 public class WikiFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     private WikiViewModel wikiViewModel;
-    private LayoutInflater inflater;
-    private ViewGroup container;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        this.inflater = inflater;
-        this.container = container;
         wikiViewModel =
                 new ViewModelProvider(this).get(WikiViewModel.class);
         View root = inflater.inflate(R.layout.fragment_wiki, container, false);
