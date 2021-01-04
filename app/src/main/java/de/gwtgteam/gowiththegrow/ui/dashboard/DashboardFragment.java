@@ -19,6 +19,8 @@ import de.gwtgteam.gowiththegrow.DetailActivity;
 import de.gwtgteam.gowiththegrow.R;
 import de.gwtgteam.gowiththegrow.ui.wiki.AZFragment;
 
+
+
 public class DashboardFragment extends Fragment implements AdapterView.OnClickListener{
 
     private DashboardViewModel dashboardViewModel;
