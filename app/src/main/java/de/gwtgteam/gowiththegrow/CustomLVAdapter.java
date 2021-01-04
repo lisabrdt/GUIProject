@@ -74,12 +74,10 @@ public class CustomLVAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        String rating_txt = "Rating: " + mv.getRating() + "/10";
-
-        holder.poster.setImageResource(mv.getPoster());
-        holder.title.setText(mv.getTitle());
-        holder.rating.setText(rating_txt);
-        holder.released.setText(mv.getReleased());
+        holder.plantImage.setImageResource(mv.getImage());
+        holder.plantName.setText(mv.getName());
+        holder.icon.setImageResource(mv.getIcon());
+        holder.iconText.setText(mv.getIconText());
 
         return convertView;
     }
