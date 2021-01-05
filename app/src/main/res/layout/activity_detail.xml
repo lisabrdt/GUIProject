@@ -63,7 +63,6 @@
 
             <TextView
                 android:id="@+id/detail_latin_name"
-                android:fontFamily="@font/abadi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="24dp"
@@ -71,171 +70,171 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
+                android:fontFamily="@font/abadi"
                 android:gravity="center_horizontal"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/detail_family"
-                android:fontFamily="@font/abadi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
+                android:fontFamily="@font/abadi"
                 android:gravity="center_horizontal"
                 android:textColor="@color/white"
-                android:textSize="22sp" />
+                android:textSize="@dimen/large_text" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:fontFamily="@font/abadi"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
+                android:fontFamily="@font/abadi"
                 android:text="Licht"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/medium_text"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/detail_info_light"
-                android:fontFamily="@font/abadi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
+                android:fontFamily="@font/abadi"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/medium_text" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:fontFamily="@font/abadi"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
+                android:fontFamily="@font/abadi"
                 android:text="Temperatur"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/medium_text"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/detail_info_temp"
-                android:fontFamily="@font/abadi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
+                android:fontFamily="@font/abadi"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/medium_text" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:fontFamily="@font/abadi"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
+                android:fontFamily="@font/abadi"
                 android:text="Feuchtigkeit"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/medium_text"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/detail_info_humidity"
-                android:fontFamily="@font/abadi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
+                android:fontFamily="@font/abadi"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/medium_text" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:fontFamily="@font/abadi"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
+                android:fontFamily="@font/abadi"
                 android:text="Wasser"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/medium_text"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/detail_info_water"
-                android:fontFamily="@font/abadi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
+                android:fontFamily="@font/abadi"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/medium_text" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:fontFamily="@font/abadi"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
+                android:fontFamily="@font/abadi"
                 android:text="Dünger"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/medium_text"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/detail_info_dung"
-                android:fontFamily="@font/abadi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
+                android:fontFamily="@font/abadi"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/medium_text" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:fontFamily="@font/abadi"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
+                android:fontFamily="@font/abadi"
                 android:text="Schädlinge"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="@dimen/medium_text"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/detail_info_pest"
-                android:fontFamily="@font/abadi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -243,8 +242,9 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
                 android:layout_marginBottom="32dp"
+                android:fontFamily="@font/abadi"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/medium_text" />
 
         </LinearLayout>
     </ScrollView>
