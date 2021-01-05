@@ -75,19 +75,24 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/add_plants"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="53dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
                 android:layout_marginBottom="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 tools:visibility="visible">
 
                 <ImageView
                     android:id="@+id/addButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:scaleX="2"
+                    android:scaleY="2"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/add"
                     app:layout_constraintStart_toStartOf="parent"
@@ -98,8 +103,6 @@
                     android:id="@+id/add"
                     android:layout_width="180dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="150dp"
-                    android:layout_marginRight="150dp"
                     android:fontFamily="@font/abadi"
                     android:gravity="center_horizontal"
                     android:text="Planze hinzufügen"
@@ -107,7 +110,6 @@
                     android:textColor="@color/white"
                     android:textSize="@dimen/medium_text"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/addButton"
                     app:layout_constraintTop_toTopOf="parent" />
 
