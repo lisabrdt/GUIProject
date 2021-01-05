@@ -78,7 +78,7 @@ public class CatalogFragment extends Fragment implements AdapterView.OnClickList
 
     public void onAddPlant(View v){
         AlertDialog.Builder builder = new AlertDialog.Builder(this.getContext());
-        builder.setMessage("Are you sure you want to exit?")
+        builder.setMessage("Pflanze per Scan oder manuell hinzufügen?")
                 .setCancelable(false)
                 .setPositiveButton("Scannen", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {

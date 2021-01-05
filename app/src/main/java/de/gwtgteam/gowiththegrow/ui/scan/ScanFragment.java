@@ -33,7 +33,7 @@ public class ScanFragment extends Fragment {
         scanViewModel =
                 new ViewModelProvider(this).get(ScanViewModel.class);
         View root = inflater.inflate(R.layout.fragment_scan, container, false);
-       // final TextView textView = root.findViewById(R.id.text_scan);
+        final TextView textView = root.findViewById(R.id.text_scan);
 
         // Create an instance of Camera
         mCamera = getCameraInstance();
@@ -42,8 +42,6 @@ public class ScanFragment extends Fragment {
         mPreview = new CameraPreview(this.getContext(), mCamera);
         FrameLayout preview = (FrameLayout) root.findViewById(R.id.camera_preview);
         preview.addView(mPreview);
-
-        root.findViewById(R.id.camera_analyze).setOnClickListener(this::onAnalyzePlant);
 
         return root;
     }
@@ -69,13 +67,6 @@ public class ScanFragment extends Fragment {
             // Camera is not available (in use or does not exist)
         }
         return c; // returns null if camera is unavailable
-    }
-
-    public void onAnalyzePlant(View v) {
-        System.out.println("-------------_SCAN-----------------");
-        Intent intent = new Intent();
-        intent.setClass(this.getContext(), PlantStatusActivity.class);
-        startActivity(intent);
     }
 
 }
