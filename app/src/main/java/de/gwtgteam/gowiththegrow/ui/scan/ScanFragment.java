@@ -43,6 +43,8 @@ public class ScanFragment extends Fragment {
         FrameLayout preview = (FrameLayout) root.findViewById(R.id.camera_preview);
         preview.addView(mPreview);
 
+        root.findViewById(R.id.camera_analyze).setOnClickListener(this::onAnalyze);
+
         return root;
     }
 
@@ -67,6 +69,12 @@ public class ScanFragment extends Fragment {
             // Camera is not available (in use or does not exist)
         }
         return c; // returns null if camera is unavailable
+    }
+
+    private void onAnalyze(View v){
+        Intent intent = new Intent();
+        intent.setClass(this.getContext(), PlantStatusActivity.class);
+        startActivity(intent);
     }
 
 }
