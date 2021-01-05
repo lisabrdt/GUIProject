@@ -1,10 +1,12 @@
 package de.gwtgteam.gowiththegrow;
 
 import android.app.Activity;
+import android.content.ClipData;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,15 +18,25 @@ public class CustomLVAdapter extends RecyclerView.Adapter<CustomLVAdapter.ViewHo
 
     //ArrayList<Movies> mItemList;
 
-    private Todos[] localDataSet;
+    private ArrayList<Todos> localDataSet;
 
     public Activity context;
     public LayoutInflater inflater;
 
     public CustomLVAdapter(Activity context, ArrayList<Todos> itemList) {
         this.context = context;
-        this.localDataSet = itemList.toArray(new Todos[itemList.size()]);
+        this.localDataSet = itemList;
         this.inflater = LayoutInflater.from(context);
+    }
+
+    public void restoreItem(Todos deletedItem, int deletedIndex) {
+        localDataSet.add(deletedIndex, deletedItem);
+        notifyItemInserted(deletedIndex);
+    }
+
+    public void removeItem(int adapterPosition) {
+        localDataSet.remove(adapterPosition);
+        notifyItemRemoved(adapterPosition);
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
@@ -32,6 +44,7 @@ public class CustomLVAdapter extends RecyclerView.Adapter<CustomLVAdapter.ViewHo
         TextView plantName;
         ImageView icon;
         TextView iconText;
+        RelativeLayout background, foreground;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -40,6 +53,8 @@ public class CustomLVAdapter extends RecyclerView.Adapter<CustomLVAdapter.ViewHo
             plantName = itemView.findViewById(R.id.dashboardElementName);
             icon = itemView.findViewById(R.id.dashboardElementIcon);
             iconText = itemView.findViewById(R.id.dashboardElementIconText);
+            background = itemView.findViewById(R.id.view_background);
+            foreground = itemView.findViewById(R.id.DashboardElement);
         }
 
         public ImageView getPlantImage(){
@@ -54,6 +69,8 @@ public class CustomLVAdapter extends RecyclerView.Adapter<CustomLVAdapter.ViewHo
         public TextView getPlantIconText(){
             return iconText;
         }
+        public RelativeLayout getBackground() { return background; }
+        public RelativeLayout getForeground() {return foreground; }
     }
 
 
@@ -69,7 +86,7 @@ public class CustomLVAdapter extends RecyclerView.Adapter<CustomLVAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Todos mv = localDataSet[position];
+        Todos mv = localDataSet.get(position);
 
         holder.getPlantImage().setImageResource(mv.getImage());
         holder.getPlantName().setText(mv.getName());
@@ -85,6 +102,6 @@ public class CustomLVAdapter extends RecyclerView.Adapter<CustomLVAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return localDataSet.length;
+        return localDataSet.size();
     }
 }
