@@ -1,6 +1,7 @@
 package de.gwtgteam.gowiththegrow;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,6 +17,8 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+
+import de.gwtgteam.gowiththegrow.settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,8 +50,9 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.navigation_settings) {
-
-            // Do something
+            Intent intent = new Intent();
+            intent.setClass(this.getBaseContext(), SettingsActivity.class);
+            startActivity(intent);
             return true;
         }
         return super.onOptionsItemSelected(item);
