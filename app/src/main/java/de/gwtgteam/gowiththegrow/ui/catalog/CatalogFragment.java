@@ -6,7 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,10 +19,12 @@ import androidx.lifecycle.ViewModelProvider;
 
 import de.gwtgteam.gowiththegrow.DetailActivity;
 import de.gwtgteam.gowiththegrow.R;
+import de.gwtgteam.gowiththegrow.settings.ChangeNameActivity;
 
 public class CatalogFragment extends Fragment implements AdapterView.OnClickListener{
 
     private CatalogViewModel catalogViewModel;
+    String[] options = {"manuell", "scannen"};
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -42,6 +46,14 @@ public class CatalogFragment extends Fragment implements AdapterView.OnClickList
         zwergpfeffer.setOnClickListener(this);
         ImageView gluecksfeder = root.findViewById(R.id.gluecksfeder);
         gluecksfeder.setOnClickListener(this);
+        ImageView monsteraTwo = root.findViewById(R.id.monsteraTwo);
+        monsteraTwo.setOnClickListener(this);
+
+        //Dropdown Temperatur
+        Spinner spin = root.findViewById(R.id.addButton);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this.getContext(), android.R.layout.simple_spinner_item, options);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin.setAdapter(adapter);
 
         catalogViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
@@ -50,6 +62,12 @@ public class CatalogFragment extends Fragment implements AdapterView.OnClickList
             }
         });
         return root;
+    }
+
+    public void onClickButton(View v){
+        /*Intent intent = new Intent();
+        intent.setClass(this.getContext(), ChangeNameActivity.class);
+        startActivity(intent);*/
     }
 
     @Override
