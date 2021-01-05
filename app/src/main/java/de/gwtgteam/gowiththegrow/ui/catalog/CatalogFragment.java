@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,7 +15,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import de.gwtgteam.gowiththegrow.R;
 
-public class CatalogFragment extends Fragment {
+public class CatalogFragment extends Fragment implements AdapterView.OnClickListener{
 
     private CatalogViewModel catalogViewModel;
 
@@ -31,5 +32,10 @@ public class CatalogFragment extends Fragment {
             }
         });
         return root;
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }
