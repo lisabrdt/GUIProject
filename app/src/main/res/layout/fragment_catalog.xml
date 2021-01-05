@@ -17,22 +17,62 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/header"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:fontFamily="@font/abadi"
-                android:gravity="center_horizontal"
-                android:text="Meine Pflanzen"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textSize="@dimen/extra_large_text"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/myPlants"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="100dp"
+                    android:layout_marginRight="100dp"
+                    android:fontFamily="@font/abadi"
+                    android:gravity="center_horizontal"
+                    android:text="Meine Pflanzen"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/extra_large_text"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/search_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/search_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/drop_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/myPlants"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/filter_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/drop_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/search_icon"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -315,7 +355,7 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
-                            android:id="@+id/friedenslilie"
+                            android:id="@+id/monstera"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
@@ -438,7 +478,7 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
-                            android:id="@+id/monstera"
+                            android:id="@+id/friedenslilie"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
@@ -935,19 +975,19 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView4"
+                        android:id="@+id/cardView8"
                         android:layout_width="0dp"
                         android:layout_height="144dp"
                         android:layout_margin="5dp"
                         android:elevation="10dp"
                         app:cardCornerRadius="8dp"
-                        app:layout_constraintBottom_toTopOf="@+id/textView4"
+                        app:layout_constraintBottom_toTopOf="@+id/textView8"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
-                            android:id="@+id/friedenslilie"
+                            android:id="@+id/monsteraTwo"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
@@ -955,7 +995,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:id="@+id/textView4"
+                        android:id="@+id/textView8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -965,10 +1005,10 @@
                         android:textSize="@dimen/large_text"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/cardView4" />
+                        app:layout_constraintTop_toBottomOf="@+id/cardView8" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/waterStatus4"
+                        android:id="@+id/waterStatus8"
                         android:layout_width="160dp"
                         android:layout_height="25dp"
                         android:layout_marginStart="48dp"
@@ -976,26 +1016,26 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="48dp"
                         android:layout_marginRight="48dp"
-                        app:layout_constraintBottom_toTopOf="@+id/foodStatus4"
+                        app:layout_constraintBottom_toTopOf="@+id/foodStatus8"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView4"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8"
                         tools:visibility="visible">
 
                         <ImageView
-                            android:id="@+id/waterBar4"
+                            android:id="@+id/waterBar8"
                             android:layout_width="120dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:src="@drawable/bar_water"
-                            app:layout_constraintEnd_toStartOf="@+id/waterIcon4"
+                            app:layout_constraintEnd_toStartOf="@+id/waterIcon8"
                             app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintHorizontal_chainStyle="spread_inside"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <ImageView
-                            android:id="@+id/waterIcon4"
+                            android:id="@+id/waterIcon8"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_weight="1"
@@ -1003,12 +1043,12 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintStart_toEndOf="@+id/waterBar4"
+                            app:layout_constraintStart_toEndOf="@+id/waterBar8"
                             app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/foodStatus4"
+                        android:id="@+id/foodStatus8"
                         android:layout_width="160dp"
                         android:layout_height="25dp"
                         android:layout_marginBottom="20dp"
@@ -1018,19 +1058,19 @@
                         tools:visibility="visible">
 
                         <ImageView
-                            android:id="@+id/foodBar4"
+                            android:id="@+id/foodBar8"
                             android:layout_width="120dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:src="@drawable/bar_nuts"
-                            app:layout_constraintEnd_toStartOf="@+id/foodIcon4"
+                            app:layout_constraintEnd_toStartOf="@+id/foodIcon8"
                             app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintHorizontal_chainStyle="spread_inside"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <ImageView
-                            android:id="@+id/foodIcon4"
+                            android:id="@+id/foodIcon8"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_weight="1"
@@ -1038,7 +1078,7 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintStart_toEndOf="@+id/foodBar4"
+                            app:layout_constraintStart_toEndOf="@+id/foodBar8"
                             app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
