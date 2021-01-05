@@ -23,6 +23,7 @@ public class ChangeLocActivity extends AppCompatActivity {
         findViewById(R.id.buttonChangeLoc).setOnClickListener(v -> {
             TextView tv = findViewById(R.id.settings_changedLoc);
             SettingsActivity.loc = tv.getText().toString();
+            SettingsActivity.changedSettings = true;
             onSave(v);
         });
     }

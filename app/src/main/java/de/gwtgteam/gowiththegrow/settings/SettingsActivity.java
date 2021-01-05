@@ -15,6 +15,7 @@ public class SettingsActivity extends AppCompatActivity {
     static String name = "Lisa";
     static String loc = "Hamburg";
     static String lang = "Deutsch";
+    static boolean changedSettings = false;
 
     String[] temp = {"Celsius (°C)", "Fahreneinheit (°F)"};
     String[] water = {"Milliter (ml)", "Ounce (oz)"};
@@ -48,10 +49,14 @@ public class SettingsActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin.setAdapter(adapter);
 
-
         findViewById(R.id.nameWrapper).setOnClickListener(this::onClickName);
         findViewById(R.id.langWrapper).setOnClickListener(this::onClickLang);
         findViewById(R.id.locWrapper).setOnClickListener(this::onClickLoc);
+
+        if(changedSettings){
+            alert();
+            changedSettings = false;
+        }
     }
 
 
@@ -71,5 +76,10 @@ public class SettingsActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setClass(this.getBaseContext(), ChangeLocActivity.class);
         startActivity(intent);
+    }
+
+    public void alert() {
+        SavedChangesAlert alert = new SavedChangesAlert();
+        alert.show(getSupportFragmentManager(), "saved changes dialog");
     }
 }

@@ -22,6 +22,7 @@ public class ChangeLangActivity extends AppCompatActivity {
         findViewById(R.id.buttonChangeLang).setOnClickListener(v -> {
             TextView tv = findViewById(R.id.settings_changedLang);
             SettingsActivity.lang = tv.getText().toString();
+            SettingsActivity.changedSettings = true;
             onSave(v);
         });
     }

@@ -21,6 +21,7 @@ public class ChangeNameActivity extends AppCompatActivity {
         findViewById(R.id.buttonChangeName).setOnClickListener(v -> {
             TextView tv = findViewById(R.id.settings_changedName);
             SettingsActivity.name = tv.getText().toString();
+            SettingsActivity.changedSettings = true;
             onSave(v);
         });
     }
