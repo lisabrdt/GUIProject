@@ -49,7 +49,7 @@ public class CustomLVAdapter extends RecyclerView.Adapter<CustomLVAdapter.ViewHo
             return plantName;
         }
         public ImageView getPlantIcon(){
-            return plantImage;
+            return icon;
         }
         public TextView getPlantIconText(){
             return iconText;
@@ -85,6 +85,6 @@ public class CustomLVAdapter extends RecyclerView.Adapter<CustomLVAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return 0;
+        return localDataSet.length;
     }
 }

@@ -15,14 +15,21 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import de.gwtgteam.gowiththegrow.CustomLVAdapter;
+import de.gwtgteam.gowiththegrow.CustomLVAdapterWiki;
 import de.gwtgteam.gowiththegrow.R;
 
 public class WikiFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     private WikiViewModel wikiViewModel;
+
+    private CustomLVAdapterWiki mAdapter;
+    private ListView listView;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -31,24 +38,19 @@ public class WikiFragment extends Fragment implements AdapterView.OnItemClickLis
         View root = inflater.inflate(R.layout.fragment_wiki, container, false);
         ListView listView = (ListView) root.findViewById(R.id.list_wiki);
 
-        ArrayList<String> list = new ArrayList<>();
-        list.add("Pflanzen von A-Z");
-        list.add("Alles übers Gießen");
-        list.add("Alles übers Licht");
-        list.add("Alles übers Umtopfen");
-        list.add("Alles übers Düngen");
-        list.add("Alles über Schädlinge");
+        String[] list = new String[]{
+                "Pflanzen von A-Z",
+                "Alles übers Gießen",
+                "Alles übers Licht",
+                "Alles übers Umtopfen",
+                "Alles übers Düngen",
+                "Alles über Schädlinge"
+        };
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter(this.getContext(), R.layout.wiki_list_element, list);
-        listView.setAdapter(arrayAdapter);
+        mAdapter = new CustomLVAdapterWiki(this.getActivity(), list);
+        listView.setAdapter(mAdapter);
         listView.setOnItemClickListener(this);
 
-        wikiViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                //textView.setText(s);
-            }
-        });
         return root;
     }
 
