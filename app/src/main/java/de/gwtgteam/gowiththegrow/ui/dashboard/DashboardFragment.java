@@ -65,10 +65,10 @@ public class DashboardFragment extends Fragment implements RecyclerItemTouchHelp
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.dashboard_list);
 
         listItems = new ArrayList<>();
-        listItems.add(new Todos(R.drawable.plant_photo_1, "ljsfhdgklsj", R.drawable.drop_small, "400ml"));
-        listItems.add(new Todos(R.drawable.plant_photo_2, "dafgh", R.drawable.umtopfen, ""));
-        listItems.add(new Todos(R.drawable.plant_photo_3, "htyjr", R.drawable.fertilizer, "50g"));
-        listItems.add(new Todos(R.drawable.plant_photo_4, "uiuku", R.drawable.drop_small, "200ml"));
+        listItems.add(new Todos(R.drawable.plant_photo_1, "Monstera", R.drawable.drop_small, "400ml"));
+        listItems.add(new Todos(R.drawable.plant_photo_2, "Monstera", R.drawable.umtopfen, ""));
+        listItems.add(new Todos(R.drawable.plant_photo_3, "Ananas", R.drawable.fertilizer, "50g"));
+        listItems.add(new Todos(R.drawable.plant_photo_4, "Grünlilie", R.drawable.drop_small, "200ml"));
 
         mAdapter = new CustomLVAdapter(this.getActivity(), listItems);
 

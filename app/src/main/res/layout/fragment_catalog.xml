@@ -8,32 +8,33 @@
     tools:context=".ui.catalog.CatalogFragment">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/header"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
                 tools:visibility="visible">
 
                 <TextView
                     android:id="@+id/myPlants"
-                    android:layout_width="180dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="120dp"
-                    android:layout_marginRight="120dp"
                     android:fontFamily="@font/abadi"
                     android:gravity="center_horizontal"
                     android:text="Meine Pflanzen"
@@ -41,7 +42,6 @@
                     android:textColor="@color/white"
                     android:textSize="@dimen/extra_large_text"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/search_icon"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,14 +49,12 @@
                     android:id="@+id/search_icon"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginEnd="50dp"
-                    android:layout_marginRight="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
                     android:layout_weight="1"
                     android:src="@drawable/search"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/myPlants"
+                    app:layout_constraintEnd_toStartOf="@+id/filter_icon"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
@@ -67,42 +65,36 @@
                     android:src="@drawable/filter"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/search_icon"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/add_plants"
                 android:layout_width="match_parent"
-                android:layout_height="53dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginBottom="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 tools:visibility="visible">
 
                 <ImageView
                     android:id="@+id/addButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:scaleX="2"
-                    android:scaleY="2"
+                    android:layout_width="37dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/add"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@android:drawable/ic_menu_add" />
+                    app:srcCompat="@drawable/add" />
 
                 <TextView
                     android:id="@+id/add"
-                    android:layout_width="180dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
                     android:fontFamily="@font/abadi"
                     android:gravity="center_horizontal"
                     android:text="Planze hinzufügen"
@@ -115,9 +107,23 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/white" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/plantOne"
@@ -167,13 +173,11 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/waterStatus"
-                        android:layout_width="160dp"
+                        android:layout_width="0dp"
                         android:layout_height="25dp"
-                        android:layout_marginStart="48dp"
-                        android:layout_marginLeft="48dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="48dp"
-                        android:layout_marginRight="48dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         app:layout_constraintBottom_toTopOf="@+id/foodStatus"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -182,8 +186,10 @@
 
                         <ImageView
                             android:id="@+id/waterBar"
-                            android:layout_width="120dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
                             android:layout_weight="1"
                             android:src="@drawable/bar_water"
                             app:layout_constraintEnd_toStartOf="@+id/waterIcon"
@@ -207,9 +213,11 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/foodStatus"
-                        android:layout_width="160dp"
+                        android:layout_width="0dp"
                         android:layout_height="25dp"
                         android:layout_marginBottom="20dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -217,8 +225,10 @@
 
                         <ImageView
                             android:id="@+id/foodBar"
-                            android:layout_width="120dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
                             android:layout_weight="1"
                             android:src="@drawable/bar_nuts"
                             app:layout_constraintEnd_toStartOf="@+id/foodIcon"
@@ -290,13 +300,11 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/waterStatus2"
-                        android:layout_width="160dp"
+                        android:layout_width="0dp"
                         android:layout_height="25dp"
-                        android:layout_marginStart="48dp"
-                        android:layout_marginLeft="48dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="48dp"
-                        android:layout_marginRight="48dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         app:layout_constraintBottom_toTopOf="@+id/foodStatus2"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -305,8 +313,10 @@
 
                         <ImageView
                             android:id="@+id/waterBar2"
-                            android:layout_width="120dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
                             android:layout_weight="1"
                             android:src="@drawable/bar_water"
                             app:layout_constraintEnd_toStartOf="@+id/waterIcon2"
@@ -330,9 +340,11 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/foodStatus2"
-                        android:layout_width="160dp"
+                        android:layout_width="0dp"
                         android:layout_height="25dp"
                         android:layout_marginBottom="20dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -340,8 +352,10 @@
 
                         <ImageView
                             android:id="@+id/foodBar2"
-                            android:layout_width="120dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
                             android:layout_weight="1"
                             android:src="@drawable/bar_nuts"
                             app:layout_constraintEnd_toStartOf="@+id/foodIcon2"
@@ -367,7 +381,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/plantFour"
@@ -418,13 +434,11 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/waterStatus4"
-                        android:layout_width="160dp"
+                        android:layout_width="0dp"
                         android:layout_height="25dp"
-                        android:layout_marginStart="48dp"
-                        android:layout_marginLeft="48dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="48dp"
-                        android:layout_marginRight="48dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         app:layout_constraintBottom_toTopOf="@+id/foodStatus4"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -433,8 +447,10 @@
 
                         <ImageView
                             android:id="@+id/waterBar4"
-                            android:layout_width="120dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
                             android:layout_weight="1"
                             android:src="@drawable/bar_water"
                             app:layout_constraintEnd_toStartOf="@+id/waterIcon4"
@@ -458,9 +474,11 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/foodStatus4"
-                        android:layout_width="160dp"
+                        android:layout_width="0dp"
                         android:layout_height="25dp"
                         android:layout_marginBottom="20dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -468,8 +486,10 @@
 
                         <ImageView
                             android:id="@+id/foodBar4"
-                            android:layout_width="120dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
                             android:layout_weight="1"
                             android:src="@drawable/bar_nuts"
                             app:layout_constraintEnd_toStartOf="@+id/foodIcon4"
@@ -541,13 +561,11 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/waterStatus3"
-                        android:layout_width="160dp"
+                        android:layout_width="0dp"
                         android:layout_height="25dp"
-                        android:layout_marginStart="48dp"
-                        android:layout_marginLeft="48dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="48dp"
-                        android:layout_marginRight="48dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="16dp"
                         app:layout_constraintBottom_toTopOf="@+id/foodStatus3"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -556,8 +574,10 @@
 
                         <ImageView
                             android:id="@+id/waterBar3"
-                            android:layout_width="120dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
                             android:layout_weight="1"
                             android:src="@drawable/bar_water"
                             app:layout_constraintEnd_toStartOf="@+id/waterIcon3"
@@ -577,13 +597,16 @@
                             app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toEndOf="@+id/waterBar3"
                             app:layout_constraintTop_toTopOf="parent" />
+
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/foodStatus3"
-                        android:layout_width="160dp"
+                        android:layout_width="0dp"
                         android:layout_height="25dp"
                         android:layout_marginBottom="20dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -591,8 +614,10 @@
 
                         <ImageView
                             android:id="@+id/foodBar3"
-                            android:layout_width="120dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
                             android:layout_weight="1"
                             android:src="@drawable/bar_nuts"
                             app:layout_constraintEnd_toStartOf="@+id/foodIcon3"
@@ -620,7 +645,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/plantFive"
@@ -671,13 +698,11 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/waterStatus5"
-                        android:layout_width="160dp"
+                        android:layout_width="0dp"
                         android:layout_height="25dp"
-                        android:layout_marginStart="48dp"
-                        android:layout_marginLeft="48dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="48dp"
-                        android:layout_marginRight="48dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         app:layout_constraintBottom_toTopOf="@+id/foodStatus5"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -686,8 +711,10 @@
 
                         <ImageView
                             android:id="@+id/waterBar5"
-                            android:layout_width="120dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
                             android:layout_weight="1"
                             android:src="@drawable/bar_water"
                             app:layout_constraintEnd_toStartOf="@+id/waterIcon5"
@@ -711,9 +738,11 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/foodStatus5"
-                        android:layout_width="160dp"
+                        android:layout_width="0dp"
                         android:layout_height="25dp"
                         android:layout_marginBottom="20dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -721,8 +750,10 @@
 
                         <ImageView
                             android:id="@+id/foodBar5"
-                            android:layout_width="120dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
                             android:layout_weight="1"
                             android:src="@drawable/bar_nuts"
                             app:layout_constraintEnd_toStartOf="@+id/foodIcon5"
@@ -796,13 +827,11 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/waterStatus6"
-                        android:layout_width="160dp"
+                        android:layout_width="0dp"
                         android:layout_height="25dp"
-                        android:layout_marginStart="48dp"
-                        android:layout_marginLeft="48dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="48dp"
-                        android:layout_marginRight="48dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         app:layout_constraintBottom_toTopOf="@+id/foodStatus6"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -811,8 +840,10 @@
 
                         <ImageView
                             android:id="@+id/waterBar6"
-                            android:layout_width="120dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
                             android:layout_weight="1"
                             android:src="@drawable/bar_water"
                             app:layout_constraintEnd_toStartOf="@+id/waterIcon6"
@@ -836,9 +867,11 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/foodStatus6"
-                        android:layout_width="160dp"
+                        android:layout_width="0dp"
                         android:layout_height="25dp"
                         android:layout_marginBottom="20dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -846,8 +879,10 @@
 
                         <ImageView
                             android:id="@+id/foodBar6"
-                            android:layout_width="120dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
                             android:layout_weight="1"
                             android:src="@drawable/bar_nuts"
                             app:layout_constraintEnd_toStartOf="@+id/foodIcon6"
@@ -874,7 +909,9 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="55dp">
+                android:layout_marginBottom="55dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/plantSeven"
@@ -925,13 +962,11 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/waterStatus7"
-                        android:layout_width="160dp"
+                        android:layout_width="0dp"
                         android:layout_height="25dp"
-                        android:layout_marginStart="48dp"
-                        android:layout_marginLeft="48dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="48dp"
-                        android:layout_marginRight="48dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         app:layout_constraintBottom_toTopOf="@+id/foodStatus7"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -940,8 +975,10 @@
 
                         <ImageView
                             android:id="@+id/waterBar7"
-                            android:layout_width="120dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
                             android:layout_weight="1"
                             android:src="@drawable/bar_water"
                             app:layout_constraintEnd_toStartOf="@+id/waterIcon7"
@@ -965,9 +1002,11 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/foodStatus7"
-                        android:layout_width="160dp"
+                        android:layout_width="0dp"
                         android:layout_height="25dp"
                         android:layout_marginBottom="20dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -975,8 +1014,10 @@
 
                         <ImageView
                             android:id="@+id/foodBar7"
-                            android:layout_width="120dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
                             android:layout_weight="1"
                             android:src="@drawable/bar_nuts"
                             app:layout_constraintEnd_toStartOf="@+id/foodIcon7"
@@ -1050,13 +1091,11 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/waterStatus8"
-                        android:layout_width="160dp"
+                        android:layout_width="0dp"
                         android:layout_height="25dp"
-                        android:layout_marginStart="48dp"
-                        android:layout_marginLeft="48dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="48dp"
-                        android:layout_marginRight="48dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         app:layout_constraintBottom_toTopOf="@+id/foodStatus8"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -1065,8 +1104,10 @@
 
                         <ImageView
                             android:id="@+id/waterBar8"
-                            android:layout_width="120dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
                             android:layout_weight="1"
                             android:src="@drawable/bar_water"
                             app:layout_constraintEnd_toStartOf="@+id/waterIcon8"
@@ -1090,9 +1131,11 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/foodStatus8"
-                        android:layout_width="160dp"
+                        android:layout_width="0dp"
                         android:layout_height="25dp"
                         android:layout_marginBottom="20dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -1100,8 +1143,10 @@
 
                         <ImageView
                             android:id="@+id/foodBar8"
-                            android:layout_width="120dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
                             android:layout_weight="1"
                             android:src="@drawable/bar_nuts"
                             app:layout_constraintEnd_toStartOf="@+id/foodIcon8"

@@ -70,10 +70,12 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
                 android:fontFamily="@font/abadi"
                 android:text="Gießen"
                 android:textColor="@color/LightBrown"
-                android:textSize="20sp" />
+                android:textSize="@dimen/large_text" />
 
 
             <androidx.recyclerview.widget.RecyclerView

@@ -22,9 +22,10 @@
             <SearchView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/LightGrey"
+                android:background="@color/white"
                 android:iconifiedByDefault="false"
-                android:padding="10dp" />
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
 
             <TextView
                 android:layout_width="match_parent"

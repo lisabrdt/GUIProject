@@ -10,22 +10,23 @@
     tools:context=".ui.wiki.WikiFragment">
 
 
-
     <SearchView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/LightGrey"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
         android:iconifiedByDefault="false"
-        android:padding="10dp" />
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" />
 
     <ListView
         android:id="@+id/list_wiki"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="55dp"
         android:divider="@android:color/transparent"
         android:dividerHeight="6.0sp"
-        android:layout_marginBottom="55dp"
         android:textColor="@color/white" />
 
 </LinearLayout>
