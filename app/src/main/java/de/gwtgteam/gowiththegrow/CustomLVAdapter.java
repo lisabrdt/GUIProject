@@ -1,42 +1,81 @@
 package de.gwtgteam.gowiththegrow;
 
 import android.app.Activity;
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 
-public class CustomLVAdapter extends BaseAdapter {
+public class CustomLVAdapter extends RecyclerView.Adapter<CustomLVAdapter.ViewHolder> {
 
     //ArrayList<Movies> mItemList;
 
-    ArrayList<Todos> itemList;
+    private Todos[] localDataSet;
 
     public Activity context;
     public LayoutInflater inflater;
 
     public CustomLVAdapter(Activity context, ArrayList<Todos> itemList) {
-        super();
-
         this.context = context;
-        this.itemList = itemList;
-
+        this.localDataSet = itemList.toArray(new Todos[itemList.size()]);
         this.inflater = LayoutInflater.from(context);
     }
 
+    public static class ViewHolder extends RecyclerView.ViewHolder{
+        ImageView plantImage;
+        TextView plantName;
+        ImageView icon;
+        TextView iconText;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            plantImage = itemView.findViewById(R.id.dashboardElementImage);
+            plantName = itemView.findViewById(R.id.dashboardElementName);
+            icon = itemView.findViewById(R.id.dashboardElementIcon);
+            iconText = itemView.findViewById(R.id.dashboardElementIconText);
+        }
+
+        public ImageView getPlantImage(){
+            return plantImage;
+        }
+        public TextView getPlantName(){
+            return plantName;
+        }
+        public ImageView getPlantIcon(){
+            return plantImage;
+        }
+        public TextView getPlantIconText(){
+            return iconText;
+        }
+    }
+
+
+    @NonNull
     @Override
-    public int getCount() {
-        return itemList.size();
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.dashboard_element, parent, false);
+
+        return new ViewHolder(view);
+
     }
 
     @Override
-    public Todos getItem(int position) {
-        return itemList.get(position);
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        Todos mv = localDataSet[position];
+
+        holder.getPlantImage().setImageResource(mv.getImage());
+        holder.getPlantName().setText(mv.getName());
+        holder.getPlantIcon().setImageResource(mv.getIcon());
+        holder.getPlantIconText().setText(mv.getIconText());
+
     }
 
     @Override
@@ -44,41 +83,8 @@ public class CustomLVAdapter extends BaseAdapter {
         return 0;
     }
 
-    public static class ViewHolder {
-        ImageView plantImage;
-        TextView plantName;
-        ImageView icon;
-        TextView iconText;
-    }
-
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-
-        Todos mv = itemList.get(position);
-
-        ViewHolder holder;
-
-        if(convertView==null) {
-
-            holder = new ViewHolder();
-            convertView = inflater.inflate(R.layout.dashboard_element, parent, false);
-
-            holder.plantImage = convertView.findViewById(R.id.dashboardElementImage);
-            holder.plantName = convertView.findViewById(R.id.dashboardElementName);
-            holder.icon = convertView.findViewById(R.id.dashboardElementIcon);
-            holder.iconText = convertView.findViewById(R.id.dashboardElementIconText);
-
-            convertView.setTag(holder);
-
-        }else{
-            holder = (ViewHolder) convertView.getTag();
-        }
-
-        holder.plantImage.setImageResource(mv.getImage());
-        holder.plantName.setText(mv.getName());
-        holder.icon.setImageResource(mv.getIcon());
-        holder.iconText.setText(mv.getIconText());
-
-        return convertView;
+    public int getItemCount() {
+        return 0;
     }
 }
