@@ -1,5 +1,6 @@
 package de.gwtgteam.gowiththegrow.ui.catalog;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -49,18 +51,15 @@ public class CatalogFragment extends Fragment implements AdapterView.OnClickList
         ImageView monsteraTwo = root.findViewById(R.id.monsteraTwo);
         monsteraTwo.setOnClickListener(this);
 
-        //Dropdown Temperatur
-        Spinner spin = root.findViewById(R.id.addButton);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this.getContext(), android.R.layout.simple_spinner_item, options);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spin.setAdapter(adapter);
-
         catalogViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 //textView.setText(s);
             }
         });
+
+        root.findViewById(R.id.add_plants).setOnClickListener(this::onAddPlant);
+
         return root;
     }
 
@@ -75,5 +74,23 @@ public class CatalogFragment extends Fragment implements AdapterView.OnClickList
         Intent intent = new Intent();
         intent.setClass(this.getContext(), DetailActivity.class);
         startActivity(intent);
+    }
+
+    public void onAddPlant(View v){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this.getContext());
+        builder.setMessage("Are you sure you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Scannen", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //TODO
+                    }
+                })
+                .setNegativeButton("Manuell", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //TODO
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }
