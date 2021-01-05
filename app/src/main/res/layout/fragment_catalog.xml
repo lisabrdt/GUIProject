@@ -34,23 +34,26 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="289dp"
-                android:background="@color/DarkGrey">
+                android:layout_height="match_parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/plantOne"
-                    android:layout_width="201dp"
-                    android:layout_height="278dp"
+                    android:layout_width="0dp"
+                    android:layout_height="280dp"
                     android:layout_margin="5dp"
                     android:background="@drawable/layout_round_corners"
-                    android:paddingLeft="1dp"
-                    android:paddingTop="1dp">
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/plantTwo"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardView"
-                        android:layout_width="193dp"
+                        android:layout_width="0dp"
                         android:layout_height="144dp"
                         android:layout_margin="5dp"
                         android:elevation="10dp"
@@ -161,16 +164,19 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/plantTwo"
-                    android:layout_width="201dp"
-                    android:layout_height="278dp"
+                    android:layout_width="0dp"
+                    android:layout_height="280dp"
                     android:layout_margin="5dp"
                     android:background="@drawable/layout_round_corners"
-                    android:paddingLeft="1dp"
-                    android:paddingTop="1dp">
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/plantOne"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardView2"
-                        android:layout_width="193dp"
+                        android:layout_width="0dp"
                         android:layout_height="144dp"
                         android:layout_margin="5dp"
                         android:elevation="10dp"
@@ -276,26 +282,152 @@
                             app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </LinearLayout>
-
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/DarkGrey">
+                android:layout_height="match_parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/plantThree"
-                    android:layout_width="201dp"
-                    android:layout_height="278dp"
+                    android:id="@+id/plantFour"
+                    android:layout_width="0dp"
+                    android:layout_height="280dp"
                     android:layout_margin="5dp"
                     android:background="@drawable/layout_round_corners"
                     android:paddingLeft="1dp"
-                    android:paddingTop="1dp">
+                    android:paddingTop="1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/plantThree"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView4"
+                        android:layout_width="0dp"
+                        android:layout_height="144dp"
+                        android:layout_margin="5dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/friedenslilie"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/plant_photo_4" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abadi"
+                        android:text="Monstera"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardView4" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/waterStatus4"
+                        android:layout_width="160dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="48dp"
+                        android:layout_marginLeft="48dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="48dp"
+                        android:layout_marginRight="48dp"
+                        app:layout_constraintBottom_toTopOf="@+id/foodStatus4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4"
+                        tools:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/waterBar4"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:src="@drawable/bar_water"
+                            app:layout_constraintEnd_toStartOf="@+id/waterIcon4"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHorizontal_chainStyle="spread_inside"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/waterIcon4"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/drop_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/waterBar4"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/foodStatus4"
+                        android:layout_width="160dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/foodBar4"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:src="@drawable/bar_nuts"
+                            app:layout_constraintEnd_toStartOf="@+id/foodIcon4"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHorizontal_chainStyle="spread_inside"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/foodIcon4"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/food_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/foodBar4"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/plantThree"
+                    android:layout_width="0dp"
+                    android:layout_height="280dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/layout_round_corners"
+                    android:paddingLeft="1dp"
+                    android:paddingTop="1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/plantFour"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardView3"
-                        android:layout_width="193dp"
+                        android:layout_width="0dp"
                         android:layout_height="144dp"
                         android:layout_margin="5dp"
                         android:elevation="10dp"
@@ -306,7 +438,7 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
-                            android:id="@+id/friedenslilie"
+                            android:id="@+id/monstera"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
@@ -403,144 +535,29 @@
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/plantFour"
-                    android:layout_width="201dp"
-                    android:layout_height="278dp"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/layout_round_corners"
-                    android:paddingLeft="1dp"
-                    android:paddingTop="1dp">
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView4"
-                        android:layout_width="193dp"
-                        android:layout_height="144dp"
-                        android:layout_margin="5dp"
-                        android:elevation="10dp"
-                        app:cardCornerRadius="8dp"
-                        app:layout_constraintBottom_toTopOf="@+id/textView4"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <ImageView
-                            android:id="@+id/monstera"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/plant_photo_4" />
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="@font/abadi"
-                        android:text="Monstera"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/large_text"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/cardView4" />
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/waterStatus4"
-                        android:layout_width="160dp"
-                        android:layout_height="25dp"
-                        android:layout_marginStart="48dp"
-                        android:layout_marginLeft="48dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="48dp"
-                        android:layout_marginRight="48dp"
-                        app:layout_constraintBottom_toTopOf="@+id/foodStatus4"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView4"
-                        tools:visibility="visible">
-
-                        <ImageView
-                            android:id="@+id/waterBar4"
-                            android:layout_width="120dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:src="@drawable/bar_water"
-                            app:layout_constraintEnd_toStartOf="@+id/waterIcon4"
-                            app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintHorizontal_chainStyle="spread_inside"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:id="@+id/waterIcon4"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_weight="1"
-                            android:src="@drawable/drop_icon"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintStart_toEndOf="@+id/waterBar4"
-                            app:layout_constraintTop_toTopOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/foodStatus4"
-                        android:layout_width="160dp"
-                        android:layout_height="25dp"
-                        android:layout_marginBottom="20dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        tools:visibility="visible">
-
-                        <ImageView
-                            android:id="@+id/foodBar4"
-                            android:layout_width="120dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:src="@drawable/bar_nuts"
-                            app:layout_constraintEnd_toStartOf="@+id/foodIcon4"
-                            app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintHorizontal_chainStyle="spread_inside"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:id="@+id/foodIcon4"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_weight="1"
-                            android:src="@drawable/food_icon"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintStart_toEndOf="@+id/foodBar4"
-                            app:layout_constraintTop_toTopOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/DarkGrey">
+                android:layout_height="match_parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/plantFive"
-                    android:layout_width="201dp"
-                    android:layout_height="278dp"
+                    android:layout_width="0dp"
+                    android:layout_height="280dp"
                     android:layout_margin="5dp"
                     android:background="@drawable/layout_round_corners"
                     android:paddingLeft="1dp"
-                    android:paddingTop="1dp">
+                    android:paddingTop="1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/plantSix"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardView5"
-                        android:layout_width="193dp"
+                        android:layout_width="0dp"
                         android:layout_height="144dp"
                         android:layout_margin="5dp"
                         android:elevation="10dp"
@@ -651,16 +668,21 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/plantSix"
-                    android:layout_width="201dp"
-                    android:layout_height="278dp"
+                    android:layout_width="0dp"
+                    android:layout_height="280dp"
                     android:layout_margin="5dp"
                     android:background="@drawable/layout_round_corners"
                     android:paddingLeft="1dp"
-                    android:paddingTop="1dp">
+                    android:paddingTop="1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/plantFive"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardView6"
-                        android:layout_width="193dp"
+                        android:layout_width="0dp"
                         android:layout_height="144dp"
                         android:layout_margin="5dp"
                         android:elevation="10dp"
@@ -766,13 +788,11 @@
                             app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </LinearLayout>
-
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/DarkGrey">
+                android:layout_height="match_parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/plantSeven"
@@ -781,11 +801,16 @@
                     android:layout_margin="5dp"
                     android:background="@drawable/layout_round_corners"
                     android:paddingLeft="1dp"
-                    android:paddingTop="1dp">
+                    android:paddingTop="1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardView7"
-                        android:layout_width="193dp"
+                        android:layout_width="0dp"
                         android:layout_height="144dp"
                         android:layout_margin="5dp"
                         android:elevation="10dp"
@@ -893,8 +918,7 @@
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
     </ScrollView>
