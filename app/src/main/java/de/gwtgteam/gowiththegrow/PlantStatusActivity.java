@@ -21,19 +21,17 @@ public class PlantStatusActivity extends AppCompatActivity {
 
         setTitle(title);
 
-       // findViewById(R.id.details_addPlant).setOnClickListener(this::onAddPlant);
+        findViewById(R.id.button_new_scan).setOnClickListener(this::newScan);
+        findViewById(R.id.button_close_plant_status).setOnClickListener(this::close);
     }
 
-    public void onAddPlant(View v) {
-//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//        builder.setMessage("Die Pflanze wurde deinem Katalog hinzugefügt")
-//                .setPositiveButton("okay", (dialogInterface, i) -> {
-//                    Intent intent = new Intent();
-//                    intent.setClass(this.getBaseContext(), MainActivity.class);
-//                    startActivity(intent);
-//                });
-//
-//        Dialog alert = builder.create();
-//        alert.show();
+    public void newScan(View v) {
+            //TODO wieder auf Scan verlinken
+    }
+
+    public void close(View v) {
+        Intent intent = new Intent();
+        intent.setClass(this.getBaseContext(), MainActivity.class);
+        startActivity(intent);
     }
 }
