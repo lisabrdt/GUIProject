@@ -49,6 +49,9 @@
             android:name=".settings.ChangeLocActivity"
             android:label="@string/app_name">
         </activity>
+        <activity
+            android:name=".PlantStatusActivity"
+            android:label="@string/app_name">
+        </activity>
     </application>
-
 </manifest>
