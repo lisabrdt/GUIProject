@@ -1,8 +1,12 @@
 package de.gwtgteam.gowiththegrow;
 
+import android.content.ClipData;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -36,5 +40,17 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.settings_menu, menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.navigation_settings) {
+
+            // Do something
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
