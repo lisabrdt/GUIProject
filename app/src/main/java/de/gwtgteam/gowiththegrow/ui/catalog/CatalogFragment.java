@@ -80,7 +80,7 @@ public class CatalogFragment extends Fragment implements AdapterView.OnClickList
                     public void onClick(DialogInterface dialog, int id) {
                         Intent intent = new Intent();
                         Bundle b = new Bundle();
-                        b.putInt("key", 1);
+                        b.putInt("key", R.id.navigation_scan);
                         intent.putExtras(b);
                         intent.setClass(builder.getContext(), MainActivity.class);
                         startActivity(intent);

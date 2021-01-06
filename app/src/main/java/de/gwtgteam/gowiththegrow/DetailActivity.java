@@ -75,6 +75,9 @@ public class DetailActivity extends AppCompatActivity {
                                 .setPositiveButton("Okay", new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
                                         Intent intent = new Intent();
+                                        Bundle bundle = new Bundle();
+                                        bundle.putInt("key", R.id.navigation_catalog);
+                                        intent.putExtras(bundle);
                                         intent.setClass(b.getContext(), MainActivity.class);
                                         startActivity(intent);
                                     }

@@ -26,7 +26,12 @@ public class PlantStatusActivity extends AppCompatActivity {
     }
 
     public void newScan(View v) {
-            //TODO wieder auf Scan verlinken
+        Intent intent = new Intent();
+        Bundle b = new Bundle();
+        b.putInt("key", R.id.navigation_scan);
+        intent.putExtras(b);
+        intent.setClass(this.getApplicationContext(), MainActivity.class);
+        startActivity(intent);
     }
 
     public void close(View v) {

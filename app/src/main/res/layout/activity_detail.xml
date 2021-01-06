@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:forceDarkAllowed="false"
     android:background="@color/DarkGrey"
     tools:context=".DetailActivity">
 
@@ -71,7 +72,7 @@
                 android:fontFamily="@font/abadi"
                 android:gravity="center_horizontal"
                 android:textColor="@color/white"
-                android:textSize="@dimen/large_text"
+                android:textSize="@dimen/extra_large_text"
                 android:textStyle="bold" />
 
             <TextView
@@ -85,7 +86,7 @@
                 android:fontFamily="@font/abadi"
                 android:gravity="center_horizontal"
                 android:textColor="@color/white"
-                android:textSize="@dimen/large_text" />
+                android:textSize="@dimen/extra_large_text" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -98,7 +99,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Licht"
                 android:textColor="@color/white"
-                android:textSize="@dimen/medium_text"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <TextView
@@ -124,7 +125,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Temperatur"
                 android:textColor="@color/white"
-                android:textSize="@dimen/medium_text"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <TextView
@@ -150,7 +151,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Feuchtigkeit"
                 android:textColor="@color/white"
-                android:textSize="@dimen/medium_text"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <TextView
@@ -176,7 +177,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Wasser"
                 android:textColor="@color/white"
-                android:textSize="@dimen/medium_text"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <TextView
@@ -202,7 +203,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Dünger"
                 android:textColor="@color/white"
-                android:textSize="@dimen/medium_text"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <TextView
@@ -228,7 +229,7 @@
                 android:fontFamily="@font/abadi"
                 android:text="Schädlinge"
                 android:textColor="@color/white"
-                android:textSize="@dimen/medium_text"
+                android:textSize="@dimen/large_text"
                 android:textStyle="bold" />
 
             <TextView
