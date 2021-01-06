@@ -2,9 +2,12 @@ package de.gwtgteam.gowiththegrow;
 
 import android.app.Activity;
 import android.content.ClipData;
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -13,6 +16,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+
+import de.gwtgteam.gowiththegrow.settings.SettingsActivity;
 
 public class CustomLVAdapter extends RecyclerView.Adapter<CustomLVAdapter.ViewHolder> {
 
@@ -22,6 +28,9 @@ public class CustomLVAdapter extends RecyclerView.Adapter<CustomLVAdapter.ViewHo
 
     public Activity context;
     public LayoutInflater inflater;
+
+    private AdapterView.OnItemClickListener listener;
+
 
     public CustomLVAdapter(Activity context, ArrayList<Todos> itemList) {
         this.context = context;
@@ -37,6 +46,10 @@ public class CustomLVAdapter extends RecyclerView.Adapter<CustomLVAdapter.ViewHo
     public void removeItem(int adapterPosition) {
         localDataSet.remove(adapterPosition);
         notifyItemRemoved(adapterPosition);
+    }
+
+    public void setOnItemListener(AdapterView.OnItemClickListener listener) {
+        this.listener = listener;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
@@ -71,6 +84,17 @@ public class CustomLVAdapter extends RecyclerView.Adapter<CustomLVAdapter.ViewHo
         }
         public RelativeLayout getBackground() { return background; }
         public RelativeLayout getForeground() {return foreground; }
+
+        public void bind(Context c) {
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent();
+                    intent.setClass(c, DetailActivity.class);
+                    c.startActivity(intent);
+                }
+            });
+        }
     }
 
 
@@ -92,6 +116,8 @@ public class CustomLVAdapter extends RecyclerView.Adapter<CustomLVAdapter.ViewHo
         holder.getPlantName().setText(mv.getName());
         holder.getPlantIcon().setImageResource(mv.getIcon());
         holder.getPlantIconText().setText(mv.getIconText());
+
+        holder.bind(context);
 
     }
 
