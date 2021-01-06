@@ -7,5 +7,10 @@
         android:icon="@drawable/settings_white"
         android:title="@string/title_home"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/help"
+        android:icon="@drawable/fragezeichen"
+        android:title="@string/title_home"
+        app:showAsAction="always" />
 
 </menu>
