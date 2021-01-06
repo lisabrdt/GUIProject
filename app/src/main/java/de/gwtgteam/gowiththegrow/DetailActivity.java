@@ -1,6 +1,7 @@
 package de.gwtgteam.gowiththegrow;
 
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
 import de.gwtgteam.gowiththegrow.settings.SavedChangesAlert;
+import de.gwtgteam.gowiththegrow.ui.wiki.AZFragment;
 
 public class DetailActivity extends AppCompatActivity {
     String title = "Ananas";
@@ -63,14 +65,32 @@ public class DetailActivity extends AppCompatActivity {
 
     public void onAddPlant(View v) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Die Pflanze wurde deinem Katalog hinzugefügt")
-                .setPositiveButton("okay", (dialogInterface, i) -> {
-                    Intent intent = new Intent();
-                    intent.setClass(this.getBaseContext(), MainActivity.class);
-                    startActivity(intent);
+        builder.setMessage("Möchtest du eine Ananas zu deinem Katalog hinzufügen?")
+                .setCancelable(false)
+                .setPositiveButton("Ja", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        AlertDialog.Builder b = new AlertDialog.Builder(builder.getContext());
+                        b.setMessage("Ananas erfolgreich hinzugefügt!")
+                                .setCancelable(false)
+                                .setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        Intent intent = new Intent();
+                                        intent.setClass(b.getContext(), MainActivity.class);
+                                        startActivity(intent);
+                                    }
+                                }).setNegativeButton("", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                            }
+                        });
+                        AlertDialog alert = b.create();
+                        alert.show();
+                    }
+                })
+                .setNegativeButton("Nein", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                    }
                 });
-
-        Dialog alert = builder.create();
+        AlertDialog alert = builder.create();
         alert.show();
     }
 }

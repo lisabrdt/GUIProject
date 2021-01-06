@@ -24,6 +24,7 @@ public class ChangeLocActivity extends AppCompatActivity {
             TextView tv = findViewById(R.id.settings_changedLoc);
             SettingsActivity.loc = tv.getText().toString();
             SettingsActivity.changedSettings = true;
+            SettingsActivity.changeString = "Dein Standort ";
             onSave(v);
         });
     }

@@ -12,7 +12,7 @@ public class SavedChangesAlert extends AppCompatDialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setMessage("Deine Daten wurden erfolgreich geändert")
+        builder.setMessage(SettingsActivity.changeString + " wurde erfolgreich geändert")
                 .setPositiveButton("okay", (dialogInterface, i) -> {
                 });
         return builder.create();

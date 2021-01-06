@@ -18,6 +18,7 @@ public class SettingsActivity extends AppCompatActivity {
     static String loc = "Hamburg";
     static String lang = "Deutsch";
     static boolean changedSettings = false;
+    static String changeString = "";
 
     String[] temp = {"Celsius (°C)", "Fahreneinheit (°F)"};
     String[] water = {"Milliter (ml)", "Ounce (oz)"};

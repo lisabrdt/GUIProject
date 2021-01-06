@@ -22,6 +22,7 @@ public class ChangeNameActivity extends AppCompatActivity {
             TextView tv = findViewById(R.id.settings_changedName);
             SettingsActivity.name = tv.getText().toString();
             SettingsActivity.changedSettings = true;
+            SettingsActivity.changeString = "Dein Name ";
             onSave(v);
         });
     }

@@ -23,6 +23,7 @@ public class ChangeLangActivity extends AppCompatActivity {
             TextView tv = findViewById(R.id.settings_changedLang);
             SettingsActivity.lang = tv.getText().toString();
             SettingsActivity.changedSettings = true;
+            SettingsActivity.changeString = "Deine Sprache ";
             onSave(v);
         });
     }

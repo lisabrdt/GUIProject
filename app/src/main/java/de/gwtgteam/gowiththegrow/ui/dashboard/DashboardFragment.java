@@ -65,10 +65,10 @@ public class DashboardFragment extends Fragment implements RecyclerItemTouchHelp
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.dashboard_list);
 
         listItems = new ArrayList<>();
-        listItems.add(new Todos(R.drawable.plant_photo_1, "Monstera", R.drawable.drop_small, "400ml"));
-        listItems.add(new Todos(R.drawable.plant_photo_2, "Monstera", R.drawable.umtopfen, ""));
-        listItems.add(new Todos(R.drawable.plant_photo_3, "Ananas", R.drawable.fertilizer, "50g"));
-        listItems.add(new Todos(R.drawable.plant_photo_4, "Grünlilie", R.drawable.drop_small, "200ml"));
+        listItems.add(new Todos(R.drawable.plant_photo_1, "Zwergpfeffer", R.drawable.drop_small, "400ml"));
+        listItems.add(new Todos(R.drawable.plant_photo_2, "Eucalyptus", R.drawable.umtopfen, ""));
+        listItems.add(new Todos(R.drawable.plant_photo_3, "Friedenslilie", R.drawable.fertilizer, "50g"));
+        listItems.add(new Todos(R.drawable.plant_photo_4, "Monstera", R.drawable.drop_small, "200ml"));
 
         mAdapter = new CustomLVAdapter(this.getActivity(), listItems);
 
@@ -102,8 +102,8 @@ public class DashboardFragment extends Fragment implements RecyclerItemTouchHelp
 
             // showing snack bar with Undo option
             Snackbar snackbar = Snackbar
-                    .make(mRecyclerView , name + " removed.", Snackbar.LENGTH_LONG);
-            snackbar.setAction("UNDO", new View.OnClickListener() {
+                    .make(mRecyclerView , name + " entfernt.", Snackbar.LENGTH_LONG);
+            snackbar.setAction("rückgängig", new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
