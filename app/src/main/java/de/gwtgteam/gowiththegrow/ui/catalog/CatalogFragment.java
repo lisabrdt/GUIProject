@@ -20,8 +20,10 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import de.gwtgteam.gowiththegrow.DetailActivity;
+import de.gwtgteam.gowiththegrow.MainActivity;
 import de.gwtgteam.gowiththegrow.R;
 import de.gwtgteam.gowiththegrow.settings.ChangeNameActivity;
+import de.gwtgteam.gowiththegrow.ui.wiki.AZFragment;
 
 public class CatalogFragment extends Fragment implements AdapterView.OnClickListener{
 
@@ -63,12 +65,6 @@ public class CatalogFragment extends Fragment implements AdapterView.OnClickList
         return root;
     }
 
-    public void onClickButton(View v){
-        /*Intent intent = new Intent();
-        intent.setClass(this.getContext(), ChangeNameActivity.class);
-        startActivity(intent);*/
-    }
-
     @Override
     public void onClick(View v) {
         Intent intent = new Intent();
@@ -78,16 +74,23 @@ public class CatalogFragment extends Fragment implements AdapterView.OnClickList
 
     public void onAddPlant(View v){
         AlertDialog.Builder builder = new AlertDialog.Builder(this.getContext());
-        builder.setMessage("Are you sure you want to exit?")
+        builder.setMessage("Pflanze hinzufügen")
                 .setCancelable(false)
                 .setPositiveButton("Scannen", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        //TODO
+                        Intent intent = new Intent();
+                        Bundle b = new Bundle();
+                        b.putInt("key", 1);
+                        intent.putExtras(b);
+                        intent.setClass(builder.getContext(), MainActivity.class);
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("Manuell", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        //TODO
+                        Intent intent = new Intent();
+                        intent.setClass(builder.getContext(), AZFragment.class);
+                        startActivity(intent);
                     }
                 });
         AlertDialog alert = builder.create();
