@@ -87,6 +87,8 @@ public class DashboardFragment extends Fragment implements RecyclerItemTouchHelp
         return rootView;
     }
 
+
+
     @Override
     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction, int position) {
         if (viewHolder instanceof CustomLVAdapter.ViewHolder) {
