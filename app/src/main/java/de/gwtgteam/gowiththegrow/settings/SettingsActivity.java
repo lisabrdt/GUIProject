@@ -9,7 +9,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import de.gwtgteam.gowiththegrow.MainActivity;
 import de.gwtgteam.gowiththegrow.R;
+import de.gwtgteam.gowiththegrow.ui.dashboard.DashboardFragment;
 
 public class SettingsActivity extends AppCompatActivity {
     static String name = "Lisa";
@@ -53,6 +55,8 @@ public class SettingsActivity extends AppCompatActivity {
         findViewById(R.id.langWrapper).setOnClickListener(this::onClickLang);
         findViewById(R.id.locWrapper).setOnClickListener(this::onClickLoc);
 
+        findViewById(R.id.settings_back).setOnClickListener(this::goBack);
+
         if(changedSettings){
             alert();
             changedSettings = false;
@@ -75,6 +79,12 @@ public class SettingsActivity extends AppCompatActivity {
     public void onClickLoc(View v) {
         Intent intent = new Intent();
         intent.setClass(this.getBaseContext(), ChangeLocActivity.class);
+        startActivity(intent);
+    }
+
+    public void goBack(View v) {
+        Intent intent = new Intent();
+        intent.setClass(this.getBaseContext(), MainActivity.class);
         startActivity(intent);
     }
 

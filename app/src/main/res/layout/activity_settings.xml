@@ -16,251 +16,278 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="24dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/nameWrapper"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+            <ImageView
+                android:id="@+id/settings_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/abc_vector_test" />
 
-                <TextView
-                    android:id="@+id/settings_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Name"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/large_text"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/settings_name_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/medium_text"
-                    app:layout_constraintBottom_toBottomOf="@+id/settings_name"
-                    app:layout_constraintEnd_toStartOf="@+id/settings_name_chevron"
-                    app:layout_constraintTop_toTopOf="@+id/settings_name" />
-
-                <ImageView
-                    android:id="@+id/settings_name_chevron"
-                    android:layout_width="@dimen/medium_text"
-                    android:layout_height="@dimen/medium_text"
-                    app:layout_constraintBottom_toBottomOf="@+id/settings_name"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/settings_name"
-                    app:srcCompat="@drawable/chevron" />
-
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@color/white"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/settings_name" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/locWrapper"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp">
-
-                <TextView
-                    android:id="@+id/settings_loc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ort"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/large_text"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/settings_loc_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/medium_text"
-                    app:layout_constraintBottom_toBottomOf="@+id/settings_loc"
-                    app:layout_constraintEnd_toStartOf="@id/settings_loc_chevron"
-                    app:layout_constraintTop_toTopOf="@+id/settings_loc" />
-
-                <ImageView
-                    android:id="@+id/settings_loc_chevron"
-                    android:layout_width="@dimen/medium_text"
-                    android:layout_height="@dimen/medium_text"
-                    app:layout_constraintBottom_toBottomOf="@+id/settings_loc"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/settings_loc"
-                    app:srcCompat="@drawable/chevron" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@color/white"
-                    app:layout_constraintTop_toBottomOf="@+id/settings_loc" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/langWrapper"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp">
-
-                <TextView
-                    android:id="@+id/settings_lang"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sprache"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/large_text"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/settings_lang_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/medium_text"
-                    app:layout_constraintBottom_toBottomOf="@+id/settings_lang"
-                    app:layout_constraintEnd_toStartOf="@+id/settings_lang_chevron"
-                    app:layout_constraintTop_toTopOf="@+id/settings_lang" />
-
-                <ImageView
-                    android:id="@+id/settings_lang_chevron"
-                    android:layout_width="@dimen/medium_text"
-                    android:layout_height="@dimen/medium_text"
-                    app:layout_constraintBottom_toBottomOf="@+id/settings_lang"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/settings_lang"
-                    app:srcCompat="@drawable/chevron" />
-
-                <View
-                    android:id="@+id/view3"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@color/white"
-                    app:layout_constraintTop_toBottomOf="@+id/settings_lang" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp">
+                android:layout_margin="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/settings_back">
 
-                <TextView
-                    android:id="@+id/settings_metrics"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Metriken"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/large_text"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <Spinner
-                    android:id="@+id/settings_temp_menu"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/nameWrapper"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@color/white"
-                    android:padding="8dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/settings_metrics" />
+                    app:layout_constraintStart_toStartOf="parent">
 
-                <Spinner
-                    android:id="@+id/settings_water_menu"
+                    <TextView
+                        android:id="@+id/settings_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/settings_name_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/medium_text"
+                        app:layout_constraintBottom_toBottomOf="@+id/settings_name"
+                        app:layout_constraintEnd_toStartOf="@+id/settings_name_chevron"
+                        app:layout_constraintTop_toTopOf="@+id/settings_name" />
+
+                    <ImageView
+                        android:id="@+id/settings_name_chevron"
+                        android:layout_width="@dimen/medium_text"
+                        android:layout_height="@dimen/medium_text"
+                        app:layout_constraintBottom_toBottomOf="@+id/settings_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/settings_name"
+                        app:srcCompat="@drawable/chevron" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/settings_name" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/locWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/settings_loc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ort"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/settings_loc_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/medium_text"
+                        app:layout_constraintBottom_toBottomOf="@+id/settings_loc"
+                        app:layout_constraintEnd_toStartOf="@id/settings_loc_chevron"
+                        app:layout_constraintTop_toTopOf="@+id/settings_loc" />
+
+                    <ImageView
+                        android:id="@+id/settings_loc_chevron"
+                        android:layout_width="@dimen/medium_text"
+                        android:layout_height="@dimen/medium_text"
+                        app:layout_constraintBottom_toBottomOf="@+id/settings_loc"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/settings_loc"
+                        app:srcCompat="@drawable/chevron" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/white"
+                        app:layout_constraintTop_toBottomOf="@+id/settings_loc" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/langWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/settings_lang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sprache"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/settings_lang_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/medium_text"
+                        app:layout_constraintBottom_toBottomOf="@+id/settings_lang"
+                        app:layout_constraintEnd_toStartOf="@+id/settings_lang_chevron"
+                        app:layout_constraintTop_toTopOf="@+id/settings_lang" />
+
+                    <ImageView
+                        android:id="@+id/settings_lang_chevron"
+                        android:layout_width="@dimen/medium_text"
+                        android:layout_height="@dimen/medium_text"
+                        app:layout_constraintBottom_toBottomOf="@+id/settings_lang"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/settings_lang"
+                        app:srcCompat="@drawable/chevron" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/white"
+                        app:layout_constraintTop_toBottomOf="@+id/settings_lang" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@color/white"
-                    android:padding="8dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/settings_temp_menu" />
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
 
-                <View
-                    android:id="@+id/view2"
+                    <TextView
+                        android:id="@+id/settings_metrics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Metriken"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Spinner
+                        android:id="@+id/settings_temp_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/LightGrey"
+                        android:padding="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/settings_metrics" />
+
+                    <Spinner
+                        android:id="@+id/settings_water_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/LightGrey"
+                        android:padding="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/settings_temp_menu" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="24dp"
+                        android:background="@color/white"
+                        app:layout_constraintTop_toBottomOf="@+id/settings_water_menu" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="24dp"
-                    android:background="@color/white"
-                    app:layout_constraintTop_toBottomOf="@+id/settings_water_menu" />
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="55dp"
+                    android:paddingTop="8dp">
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp">
-
-                <TextView
-                    android:id="@+id/settings_push"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Push-Benachrichtigungen"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/large_text"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/settings_push"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Push-Benachrichtigungen"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
-                <Switch
-                    android:id="@+id/settings_push_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <Switch
+                        android:id="@+id/settings_push_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/settings_push" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@color/white"
-                    app:layout_constraintTop_toBottomOf="@+id/settings_push" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/white"
+                        app:layout_constraintTop_toBottomOf="@+id/settings_push_button" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
